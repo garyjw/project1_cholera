@@ -12,42 +12,40 @@
 
 	<body>
 
-		<div style="width:100%; height:100%; float:left">
+		<div style="width:1980px; height:1080px;">
 			<div id="choleraDeathsTable"style="width:100%; height:100%;"></div>
 		</div>
-		<div style="width:100%; height:100%; float:left">
+		<div style="width:1980px; height:1080px;">
 			<div id="choleraDeathsChart" style="width:100%; height:100%;"></div>
 		</div>
 
-		<hr>
-
-		<div style="width:100%; height:100%; float:left">
+		<div style="width:1980px; height:720px;">
 			<div id="naplesCholeraAgeSexTable"style="width:100%; height:100%;"></div>
 		</div>
-		<div style="width:100%; height:100%; float:left">
+		<div style="width:1980px; height:1080px; ">
 			<div id="naplesCholeraAgeSexChart" style="width:100%; height:100%;"></div>
 		</div>
 
-		<hr>
-
-		<div style="width:100%; height:100%; float:left">
+		<div style="width:1980px; height:720px;">
 			<div id="ukCensusTable"style="width:100%; height:100%;"></div>
 		</div>
-		<div style="width:100%; height:100%; float:left">
+		<div style="width:1980px; height:1080px;">
 			<div id="ukCensusPieChart" style="width:100%; height:100%;"></div>
 		</div>
-		<div style="width:100%; height:100%; float:left">
+		<div style="width:1980px; height:1080px;">
 			<div id="ukCensusBarChart" style="width:100%; height:100%;"></div>
 		</div>
-		<div style="width:100%; height:100%; float:left">
+		<div style="width:1980px; height:1080px;">
 			<div id="ukCensusMenVsWomenPieChart" style="width:100%; height:100%;"></div>
 		</div>
-
-		<hr>
 
 		<div style="width:1980px; height:1080px">
 			<div id="choleraMap" style="width:100%; height:100%"></div>
 		</div>
+
+		</div>Made with plot.ly</div>
+		<div>Data of Cholera from Robin Wilson</div>
+		<div>Created by Gary Wong, garyjw@hawaii.edu</div>
 
 		<script>
 
@@ -77,15 +75,15 @@
 		      values: headerValues,
 		      align: ["center", "right"],
 		      line: {color: "#000000", width: 1},
-		      fill: {color: ["#198726"]},
-					font: {family: "Helvetica", size: 15, color: "#FFFFFF"}
+		      fill: {color: ["#000000"]},
+					font: {family: "Helvetica", size: 17, color: "#FFFFFF"}
 		    },
 		    cells: {
 		      values: cellValues,
 		      align: ["center", "right"],
 		      line: {color: "#000000", width: 1},
-		      fill: {color: ["#EEE"]},
-					font: {family: "Courier New", size: 13, color: "#000000"}
+		      fill: {color: ["#ffffff"]},
+					font: {family: "Courier New", size: 15, color: "#000000"}
 		    }
 		  }
 
@@ -198,15 +196,15 @@
 					values: headerValues,
 					align: ["center", "right"],
 					line: {color: "#000000", width: 1},
-					fill: {color: ["#198723"]},
-					font: {family: "Helvetica", size: 15, color: "#FFFFFF"}
+					fill: {color: ["#000000"]},
+					font: {family: "Helvetica", size: 17, color: "#FFFFFF"}
 				},
 				cells: {
 					values: cellValues,
 					align: ["center", "right"],
 					line: {color: "#000000", width: 1},
-					fill: {color: ["#EEE"]},
-					font: {family: "Courier New", size: 13, color: "#000000"}
+					fill: {color: ["#ffffff"]},
+					font: {family: "Courier New", size: 15, color: "#000000"}
 				}
 			}
 
@@ -312,15 +310,15 @@
 					values: headerValues,
 					align: ["center", "right"],
 					line: {color: "#000000", width: 1},
-					fill: {color: ["#198723"]},
-					font: {family: "Helvetica", size: 15, color: "#FFFFFF"}
+					fill: {color: ["#000000"]},
+					font: {family: "Helvetica", size: 17, color: "#FFFFFF"}
 				},
 				cells: {
 					values: cellValues,
 					align: ["center", "right"],
 					line: {color: "#000000", width: 1},
-					fill: {color: ["#EEE"]},
-					font: {family: "Courier New", size: 13, color: "#000000"}
+					fill: {color: ["#ffffff"]},
+					font: {family: "Courier New", size: 15, color: "#000000"}
 				}
 			}
 
@@ -360,7 +358,7 @@
 			cellValues[2].pop();
 
 			var maleColors = ["#689900", "#8fc31f", "#acdb48", "#bae069", "#bcd87f", "#c6db99", "#d9e8b9", "#dee8c9", "#ecf2e1"]
-			var femaleColors = ["#700064", "#920783", "#aa349f", "#ce44c0", "#a3479a", "#a3599b", "#ba77b3", "#cc96c6", "#e8c7e4"]
+			var femaleColors = ["#700064", "#920783", "#aa349f", "#a3479a", "#a3599b", "#ba77b3", "#cc96c6", "#e8c7e4", "#eadae8"]
 
 
 			var data = [{
@@ -612,8 +610,8 @@
 		        hoverinfo: "text",
 		        text: hoverText,
 		        marker: {
-		            size: deathCount,
-								color: "red",
+		        	size: deathCount,
+				color: "red",
 		        },
 		    },
 				{
@@ -623,8 +621,8 @@
 						hoverinfo: "text",
 						text: "Pump",
 						marker: {
-								size: 15,
-								color: "blue",
+							size: 15,
+							color: "blue",
 						},
 				}];
 
@@ -646,7 +644,7 @@
 							}
 						},
 						mapbox: {
-								style: "light",
+								style: "streets",
 						    bearing:0,
 								pitch:0,
 						    zoom:16,
@@ -657,7 +655,7 @@
 						},
 		    };
 				Plotly.setPlotConfig({
-				  mapboxAccessToken: 'pk.eyJ1IjoiZXRwaW5hcmQiLCJhIjoiY2luMHIzdHE0MGFxNXVubTRxczZ2YmUxaCJ9.hwWZful0U2CQxit4ItNsiQ'
+				  mapboxAccessToken: 'pk.eyJ1IjoiZ2FyeWp3IiwiYSI6ImNqbWNlbGR3MjBleHoza25xb2ZwMjc5eXcifQ.WmlpM94XaKe70-BFgBxsqw'
 				})
 		    Plotly.newPlot(choleraMap, data, layout, {displayModeBar: false});
 
